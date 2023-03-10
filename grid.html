@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+  />
+    <title>grid</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>Lastname</th>
+            <th>email</th>
+            <th>website</th>
+            <th>address</th>
+            <th>gender</th>
+            <th>Delete</th>
+            <th>Edit</th>
+            
+        </tr>
+
+        <?php foreach($users as $user): ?>
+            <tr>
+                <td><?= $user->id ?></td>
+                <td><?= $user->name ?></td>
+                <td><?= $user->last_name ?></td>
+                <td><?= $user->email ?></td>
+                <td><?= $user->website ?></td>
+                <td><?= $user->address ?></td>
+                <td><?= $user->gender ?></td>
+                <td>
+                    <form action="delete.php" method="post">
+                        <input name="deleteToId" hidden type="text" value="<?= $user->id ?>">
+                        <button type="submit"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                    </form>
+                </td>
+                <td>
+                    <form action="edit.php" method="get">
+                        <input name="editin" hidden type="text" value="<?= $user->id ?>">
+                        <button type="submit">EDIT</button>
+                    </form>
+                </td>
+            </tr>
+        <?php endforeach; ?>
+    </table>
+
+</body>
+</html>

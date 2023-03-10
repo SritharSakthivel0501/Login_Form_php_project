@@ -1,0 +1,20 @@
+form{
+    border-radius: 10px;
+    width: 450px;
+    height: 400px;
+    text-align: center;
+    margin: 100px 10px 10px 406px;
+    background-color: bisque;
+    box-shadow: 0px 20px 50px rgba(0,0,0,.5);
+}
+
+input{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+button{
+    margin-top: 10px;
+    background-color: rgb(219, 103, 126);
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+}

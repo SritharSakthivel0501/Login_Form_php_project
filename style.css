@@ -1,0 +1,26 @@
+table, td, th {
+    border: 1px solid;
+    border-collapse: collapse;
+    padding-top: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+table{
+    box-shadow: 0px 20px 50px rgba(0,0,0,.5);
+}
+th{
+    background-color: rgb(134, 226, 162);
+}
+i{
+    color: red;
+}
+
+    /* button{
+        background-color: rgb(134, 226, 162);
+    } */
+
+/* table tr:nth-child(odd){
+    background-color: rgb(247, 226, 236);
+} */

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <title>Document</title>
+</head>
+<body>
+    <?php foreach ($edit as $edits): ?>
+    
+    <form action="update.php" method="post">
+        <h3>EDIT</h3>
+        <input hidden name="id_value"  value="<?php echo $edits->id ?>" >
+        <label>Name</label>
+        <input name="editname" type="text" value="<?php echo $edits->name ?>">
+        <br>
+        <br>
+        <label>Last Name</label>
+        <input name="editlastname" type="text" value="<?php echo $edits->last_name ?>">
+        <br>
+        <br>
+        <label>Email</label>
+        <input name="editemail" type="email" value="<?php echo $edits->email ?>">
+        <br>
+        <br>
+        <label>Website</label>
+        <input name="editweb" type="text" value="<?php echo $edits->website ?>">
+        <br>
+        <br>
+        <label>Address</label>
+        <input name="editAddress" type="text" value="<?php echo $edits->address ?>">
+        <br>
+        <br>
+        <label>Gender</label>
+        <input name="gender" value="female" type="radio">Female
+        <input name="gender" value="male" type="radio">Male
+        <input name="gender" value="other" type="radio">Other
+        <br>
+        <button>send</button>
+    </form>
+    <?php endforeach; ?>
+
+
+    
+</body>
+</html>
